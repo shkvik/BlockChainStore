@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Store.Models;
+using Store.Services;
 using System.Diagnostics;
-using System.Linq.Expressions;
 
 namespace Store.Controllers
 {
@@ -9,17 +9,24 @@ namespace Store.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IConfiguration _configuration;
+        private readonly IUserContext _dataContext;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
+        public HomeController(ILogger<HomeController> logger,
+                              IConfiguration configuration,
+                              IUserContext dataContext)
         {
-            _configuration = configuration;
             _logger = logger;
+            _configuration = configuration;
+            _dataContext = dataContext;
+           
         }
 
 
         public IActionResult Index()
         {
-            var some = _configuration["NewValue"];
+
+            var s = _dataContext.GetAllUser();
+            var e = _dataContext.GetUserById(2);
 
             return View();
         }
