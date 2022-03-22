@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Store.Data;
 using Store.Models;
 using Store.Services;
 using System.Diagnostics;
@@ -11,13 +12,17 @@ namespace Store.Controllers
         private readonly IConfiguration _configuration;
         private readonly IUserContext _dataContext;
 
+        ApplicationDbContext _context;
+
         public HomeController(ILogger<HomeController> logger,
                               IConfiguration configuration,
-                              IUserContext dataContext)
+                              IUserContext dataContext,
+                              ApplicationDbContext context)
         {
             _logger = logger;
             _configuration = configuration;
             _dataContext = dataContext;
+            _context = context;
            
         }
 
@@ -25,8 +30,9 @@ namespace Store.Controllers
         public IActionResult Index()
         {
 
-            var s = _dataContext.GetAllUser();
-            var e = _dataContext.GetUserById(2);
+            //var s = _dataContext.GetAllUser();
+            //var e = _dataContext.GetUserById(2);
+            var users = _context.Users.ToList();
 
             return View();
         }
