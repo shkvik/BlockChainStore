@@ -32,7 +32,7 @@ namespace Store.Services
         {
             using (var db = new UserContext(_configuration))
             {
-                return db.Users.Where(u=>u.Id == id).FirstOrDefault();
+                return null;
             }
         }
         public User AddUser(User user)
