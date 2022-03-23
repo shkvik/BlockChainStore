@@ -16,8 +16,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
 
 var app = builder.Build();
 
@@ -35,6 +36,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

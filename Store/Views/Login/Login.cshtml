@@ -1,0 +1,34 @@
+﻿    <main class="main">
+        <section class="heading">
+        <h2 class="heading__heading container"> Login
+        </h2>
+        </section>
+        <section class="registration">
+            <div class="registration__content_wrapper container">
+            @{
+                if (User.Identity.IsAuthenticated)
+                {
+                    <p>Hello @User.Identity?.Name!</p>
+                }
+                else
+                {
+                    <partial name="_LoginPartial" />
+                }
+            }
+
+                <div class="registration__text">
+                    <h3 class="registration__text_heading">loyalty has its perks</h3>
+                    <p class="registration__text_subheading">Get in on the loyalty program where you can earn points and
+                        unlock serious perks. Starting with these as soon as you join:</p>
+                    <ul class="registration__list">
+                        <li class="registration__list_item">15% off welcome offer</li>
+                        <li class="registration__list_item">Free shipping, returns and exchanges on all orders</li>
+                        <li class="registration__list_item">$10 off a purchase on your birthday</li>
+                        <li class="registration__list_item">Early access to products</li>
+                        <li class="registration__list_item">Exclusive offers & rewards</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="main__overlay"></div>
+    </main>
