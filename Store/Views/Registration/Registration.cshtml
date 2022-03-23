@@ -1,14 +1,18 @@
+﻿@model CustomIdentityApp.ViewModels.RegisterViewModel
     <main class="main">
         <section class="heading">
             <h2 class="heading__heading container">registration</h2>
         </section>
         <section class="registration">
             <div class="registration__content_wrapper container">
-                <form action="#" method="post" class="registration__form">
+                <form asp-controller="Registration" asp-action="Register" method="post" class="registration__form">
+                    <div asp-validation-summary="ModelOnly"></div>
                     <fieldset class="registration__fieldset">
                         <legend class="registration__form_name_legend">your name</legend>
-                        <input type="text" class="registration__form_input" id="name" placeholder="First name">
-                        <input type="text" class="registration__form_input" id="surname" placeholder="Last name">
+
+                        <input asp-for="UserName" type="text" class="registration__form_input" id="username" placeholder="User name">
+                        <span asp-validation-for="UserName"></span>
+
                     </fieldset>
                     <fieldset class="registration__fieldset_radio">
                         <legend class="visually-hidden">your gender</legend>
@@ -20,8 +24,16 @@
                     </fieldset>
                     <fieldset class="registration__fieldset">
                         <legend class="registration__form_login_legend">login details</legend>
-                        <input type="email" class="registration__form_input" id="email" placeholder="Email">
-                        <input type="password" class="registration__form_input" id="password" placeholder="Passsword">
+
+                        <input asp-for="Email" type="email" class="registration__form_input" id="email" placeholder="Email">
+                        <span asp-validation-for="Email"></span>
+
+                        <input asp-for="Password" type="password" class="registration__form_input" id="password" placeholder="Passsword">
+                        <span asp-validation-for="Email"></span>
+
+                        <input asp-for="PasswordConfirm" type="password" class="registration__form_input" id="password" placeholder="Confirm password ">
+                        <span asp-validation-for="PasswordConfirm"></span>
+
                         <p class="registration__form_text">Please use 8 or more characters, with at least 1 number and a
                             mixture of uppercase and lowercase letters</p>
                     </fieldset>

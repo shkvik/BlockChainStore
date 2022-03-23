@@ -10,7 +10,7 @@
     <None Include="Views\Cart\IndexCart.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <None Include="Views\Product\IndexProduct.cshtml" />
-    <None Include="Views\Register\IndexRegister.cshtml" />
+    <None Include="Views\Login\Login.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

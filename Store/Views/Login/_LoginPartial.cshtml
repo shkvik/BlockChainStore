@@ -1,0 +1,28 @@
+﻿@model Store.Models.Account.LoginViewModel
+
+<h2>Вход в приложение</h2>
+
+<form method="post" asp-controller="Login" asp-action="Login" class="registration__form">
+      
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+
+        <input asp-for="Email" class="registration__form_input" id="username" placeholder="User name" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+
+        <input asp-for="Password" class="registration__form_input" id="password" placeholder="Passsword"/>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <button type="submit" class="registration__form_submit"> Enter </button>
+    </div>
+</form>
+
+
+<a class="featured__link" asp-controller="Registration" asp-action="">
+<div class="featured__button">Browse All Product</div></a>
+                
+
+                            
