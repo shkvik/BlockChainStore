@@ -65,7 +65,8 @@ namespace Store.Controllers
         {
             // удаляем аутентификационные куки
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+
+            return RedirectToAction("Index");
         }
     }
 }
