@@ -1,4 +1,6 @@
-﻿<main class="main">
+﻿
+
+<main class="main">
     <section class="heading">
     <h2 class="heading__heading container"> Login
     </h2>
@@ -8,10 +10,7 @@
             @{
                 if (User.Identity.IsAuthenticated)
                 {
-                    <p>Hello @User.Identity?.Name!</p>
-                    <form method="post" asp-controller="Login" asp-action="Logout">
-                        <input type="submit" value="Выход" />
-                    </form>
+                    <partial name="_AccountPartial" />
                 }
                 else
                 {
