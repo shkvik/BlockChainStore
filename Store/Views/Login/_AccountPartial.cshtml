@@ -1,4 +1,7 @@
 ﻿<p>Hello @User.Identity?.Name!</p>
+
+<a asp-controller="Users" asp-action="Index"> Users </a>
+
 <form method="post" asp-controller="Login" asp-action="Logout">
     <input type="submit" value="Выход" />
 </form>
