@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+
+
+<main class="main">
+    <section class="heading">
+        <h2 class="heading__heading container">Edit users roles</h2>
+
+        
+
+    </section>
+    <section class="registration">
+        <div class="registration__content_wrapper container">
+            <div class="registration__text">
+                <h3 class="registration__text_heading"> Edit users roles </h3>
+                <p class="registration__text_subheading">Get in on the loyalty program where you can earn points and
+                    unlock serious perks. Starting with these as soon as you join:</p>
+
+                <a asp-action="Create">Add new role</a>
+                <a asp-action="UserList">Список пользователей</a>
+
+                <ul class="registration__list">
+                    @foreach (var role in Model)
+                    {
+                        <li class="registration__list_item">
+                            <div>
+                                @role.Name
+                            </div>
+
+                            <form asp-action="Delete" asp-route-id="@role.Id" method="post">
+                                <button type="submit" class="btn btn-sm btn-danger">
+                                    Удалить
+                                </button>
+                            </form>
+
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="main__overlay"></div>
+</main>
