@@ -1,0 +1,120 @@
+﻿.stock__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 65px 0 0 0;
+    max-width: 1140px;
+}
+
+@media (max-width: 768px) {
+    .stock__list {
+        padding: 20px 0 0 0;
+    }
+}
+
+@media (max-width: 635px) {
+    .stock__list {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+.stock__item {
+    width: 32%;
+    min-height: 260px;
+    background-blend-mode: overlay;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .stock__item {
+        min-height: 168px;
+    }
+}
+
+@media (max-width: 635px) {
+    .stock__item {
+        width: 100%;
+        margin: 32px 0 0 0;
+    }
+}
+
+.stock__item_heading {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.stock__item_text {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #F16D7F;
+    text-transform: uppercase;
+}
+
+.stock__item_woman {
+    background: url("../img/img_item_woman.jpg"), rgba(33, 22, 22, 0.7);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.stock__item_man {
+    background: url("../img/img_item_man.jpg"), rgba(33, 22, 22, 0.7);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.stock__item_kids {
+    background: url("../img/img_item_kid.jpg"), rgba(33, 22, 22, 0.7);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.stock__item_accessoires {
+    background: url("../img/img_item_accessoires.jpg"), rgba(33, 22, 22, 0.7);
+    width: 100%;
+    min-height: 180px;
+    margin: 30px 0 0 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 635px) {
+    .stock__item_accessoires {
+        width: 100%;
+        margin: 32px 0 0 0;
+        min-height: 111px;
+    }
+}
