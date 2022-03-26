@@ -126,6 +126,7 @@
         cursor: pointer;
     }
 
+
 .header__search_button {
     margin: 0;
 }
@@ -137,7 +138,7 @@
 .header__navigation {
     display: none;
     position: absolute;
-    right: 0px;
+    -webkit-transform: translate(-120px,0);
     top: 75px;
     min-width: 232px;
     min-height: 747px;
@@ -145,6 +146,7 @@
     border: none;
     padding: 17px 17px 0 34px;
 }
+
 
 .header__navigation_close {
     margin: 0 0 0 210px;

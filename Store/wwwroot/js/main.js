@@ -1,5 +1,6 @@
 const menuButton = document.querySelector('#menu_button');
 const navMenu = document.querySelector('.header__navigation');
+
 const menuClose = document.querySelector('.header__navigation_close');
 const sectionOverlay = document.querySelector('.section__overlay');
 
@@ -24,18 +25,17 @@ const sizeBox = document.querySelector('.filter__size');
 
 navMenu.style.display = "none";
 
-menuButton.addEventListener("click", function () {
+menuButton.addEventListener("mouseover", function () {
     if (navMenu.style.display == "none") {
         if (sectionOverlay)
             sectionOverlay.style.display = "block";
         navMenu.style.display = "block";
         navMenu.style.zIndex = "1";
     }
-    else {
-        navMenu.style.display = "none";
-        if (sectionOverlay)
-            sectionOverlay.style.display = "none";
-    }
+});
+
+navMenu.addEventListener("mouseout", function () {
+    navMenu.style.display = "none";
 });
 
 menuClose.addEventListener("click", function () {
