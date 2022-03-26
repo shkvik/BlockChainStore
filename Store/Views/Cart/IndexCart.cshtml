@@ -1,106 +1,69 @@
-    <main class="main">
-        <section class="heading">
-            <h2 class="heading__heading container">shopping cart</h2>
-        </section>
-        <section class="cart container">
-                <h2 class="visually-hidden">корзина</h2>
-                <div class="cart__wrapper">
-                <ul class="cart__list">
-                    <li class="cart__list-item">
-                        <img src="img/cart_man_in_hoody.jpg" alt="Man in hoody" width="262" height="306" class="cart__list-img">
-                        <div class="cart__list-wrapper">
-                            <h3 class="cart__list-heading">mango people t-shirt</h3>
-                            <p class="cart__list-text">Price: <span class="cart__list-pink">$300</span></p>
-                            <p class="cart__list-text">Color: Red</p>
-                            <p class="cart__list-text">Size: Xl</p>
-                            <div class="cart__list-subwrapper">
-                                <label class="cart__list-text">Quantity:</label>
-                                <input type="text" class="cart__list-qty" placeholder="2">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="cart__list-item">
-                        <img src="img/cart_man_in_red.jpg" alt="Man in red" width="262" height="306" class="cart__list-img">
-                        <div class="cart__list-wrapper">
-                            <h3 class="cart__list-heading">mango people t-shirt</h3>
-                            <p class="cart__list-text">Price: <span class="cart__list_item_pink">$300</span></p>
-                            <p class="cart__list-text">Color: Red</p>
-                            <p class="cart__list-text">Size: Xl</p>
-                            <div class="cart__list-subwrapper">
-                                <label class="cart__list-text">Quantity:</label>
-                                <input type="text" class="cart__list-qty" placeholder="2">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                    <ul class="cart__list-buttons">
-                        <li><button type="reset" class="cart__list-button">clear shopping cart</button></li>
-                        <li><button type="button" class="cart__list-button">continue shopping</button></li>
-                    </ul>
-                </div>                  
-                <div class="cart__shipping_wrapper">
-                    <form action="post" class="cart__shipping">
-                        <h3 class="cart__shipping_heading">shipping adress</h3>
-                        <label for="city" class="visually-hidden">City</label>
-                        <input type="text" id="city" class="cart__shipping_input" placeholder="Bangladesh">
-                        <label for="state" class="visually-hidden">State</label>
-                        <input type="text" id="state" class="cart__shipping_input" placeholder="State">
-                        <label for="zip" class="visually-hidden">Postcode/zip</label>
-                        <input type="text" id="zip" class="cart__shipping_input" placeholder="Postcode / Zip">
-                        <button type="submit" class="cart__shipping_button">get a quote</button>
-                    </form>
-                    <div class="cart__total">
-                        <div class="cart__total_text_wrapper">
-                            <p class="cart__subtotal_text">sub total $900</p>
-                            <p class="cart__grandtotal_text">grand total $900</p>
-                        </div>
-                        <div class="cart__total_checkout_wrapper">
-                            <hr class="cart__total_line">
-                            <button type="submit" class="cart__total_checkout">proceed to checkout</button>
+<link rel="stylesheet" href="~/css/heading.css" >
+<link rel="stylesheet" href="~/css/cart.css" >
+
+
+<main class="main">
+    <section class="heading">
+        <h2 class="heading__heading container">shopping cart</h2>
+    </section>
+    <section class="cart container">
+            <h2 class="visually-hidden">корзина</h2>
+            <div class="cart__wrapper">
+            <ul class="cart__list">
+                <li class="cart__list-item">
+                    <img src="img/cart_man_in_hoody.jpg" alt="Man in hoody" width="262" height="306" class="cart__list-img">
+                    <div class="cart__list-wrapper">
+                        <h3 class="cart__list-heading">mango people t-shirt</h3>
+                        <p class="cart__list-text">Price: <span class="cart__list-pink">$300</span></p>
+                        <p class="cart__list-text">Color: Red</p>
+                        <p class="cart__list-text">Size: Xl</p>
+                        <div class="cart__list-subwrapper">
+                            <label class="cart__list-text">Quantity:</label>
+                            <input type="text" class="cart__list-qty" placeholder="2">
                         </div>
                     </div>
-                </div>
-            <div class="main__overlay"></div>
-        </section>
-    </main>
-    <footer>
-        <section class="subscribe">
-            <div class="container subscribe__wrapper">
-                <h2 class="visually-hidden">Subscribe</h2>
-                <ul class="subscribe__list">
-                    <li class="subscribe__list_item">
-                        <img class="subscribe__list_item_img" src="img/woman_face.png" width="96" alt="Subscribe">
-                        <p class="subscribe__list_item_text">“Vestibulum quis porttitor dui! Quisque viverra nunc
-                            mi,<span class="subscribe__list_item_italic">a pulvinar purus condimentum“</span></p>
-                    </li>
-                    <li class="subscribe__list_item">
-                        <h3 class="subscribe__list_item_heading">subscribe</h3>
-                        <h4 class="subscribe__list_item_subheading">for our newletter and promotion</h4>
-                        <div class="subscribe__list_input_wrapper">
-                            <input class="subscribe__list_item_input" type="text" placeholder="enter your email">
-                            <button type="submit" class="subscribe__list_item_button">subscribe</button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="copyright">
-            <h2 class="visually_hidden">Copyright</h2>
-            <ul class="copyright__list container">
-                <li>
-                    <p class="copyright__list_text">&copy; 2021 Brand All Rights Reserved.</p>
                 </li>
-                <li>
-                    <ul class="copyright__list_social">
-                        <li class="copyright__list_social_item"><i
-                                class="fab fa-facebook-f copyright__list_social_icon"></i></li>
-                        <li class="copyright__list_social_item"><i
-                                class="fab fa-instagram copyright__list_social_icon"></i></li>
-                        <li class="copyright__list_social_item"><i
-                                class="fab fa-pinterest-p copyright__list_social_icon"></i></li>
-                        <li class="copyright__list_social_item"><i
-                                class="fab fa-twitter  copyright__list_social_icon"></i></li>
-                    </ul>
+                <li class="cart__list-item">
+                    <img src="img/cart_man_in_red.jpg" alt="Man in red" width="262" height="306" class="cart__list-img">
+                    <div class="cart__list-wrapper">
+                        <h3 class="cart__list-heading">mango people t-shirt</h3>
+                        <p class="cart__list-text">Price: <span class="cart__list_item_pink">$300</span></p>
+                        <p class="cart__list-text">Color: Red</p>
+                        <p class="cart__list-text">Size: Xl</p>
+                        <div class="cart__list-subwrapper">
+                            <label class="cart__list-text">Quantity:</label>
+                            <input type="text" class="cart__list-qty" placeholder="2">
+                        </div>
+                    </div>
                 </li>
             </ul>
-        </section>
+                <ul class="cart__list-buttons">
+                    <li><button type="reset" class="cart__list-button">clear shopping cart</button></li>
+                    <li><button type="button" class="cart__list-button">continue shopping</button></li>
+                </ul>
+            </div>                  
+            <div class="cart__shipping_wrapper">
+                <form action="post" class="cart__shipping">
+                    <h3 class="cart__shipping_heading">shipping adress</h3>
+                    <label for="city" class="visually-hidden">City</label>
+                    <input type="text" id="city" class="cart__shipping_input" placeholder="Bangladesh">
+                    <label for="state" class="visually-hidden">State</label>
+                    <input type="text" id="state" class="cart__shipping_input" placeholder="State">
+                    <label for="zip" class="visually-hidden">Postcode/zip</label>
+                    <input type="text" id="zip" class="cart__shipping_input" placeholder="Postcode / Zip">
+                    <button type="submit" class="cart__shipping_button">get a quote</button>
+                </form>
+                <div class="cart__total">
+                    <div class="cart__total_text_wrapper">
+                        <p class="cart__subtotal_text">sub total $900</p>
+                        <p class="cart__grandtotal_text">grand total $900</p>
+                    </div>
+                    <div class="cart__total_checkout_wrapper">
+                        <hr class="cart__total_line">
+                        <button type="submit" class="cart__total_checkout">proceed to checkout</button>
+                    </div>
+                </div>
+            </div>
+        <div class="main__overlay"></div>
+    </section>
+</main>
